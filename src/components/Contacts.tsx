@@ -11,8 +11,8 @@ export function Contacts() {
         <div className="text-blue-400 text-4xl font-bold mb-12">
           Contact Information
         </div>
-        <div className="flex gap-10 mb-10">
-          <div className="bg-gray-800 w-[400px] h-[100px] flex items-center rounded-lg">
+        <div className="flex flex-col lg:flex-row gap-10 mb-10">
+          <div className="bg-gray-800 w-[300px] lg:w-[400px] h-[100px] flex items-center rounded-lg">
             <div className="mx-5">
               <User className="w-8 h-8 text-blue-400" />
             </div>
@@ -22,7 +22,7 @@ export function Contacts() {
             </div>
           </div>
           <div>
-            <div className="bg-gray-800 w-[400px] h-[100px] flex items-center rounded-lg">
+            <div className="bg-gray-800 w-[300px] lg:w-[400px] h-[100px] flex items-center rounded-lg">
               <div className="mx-5">
                 <Phone className="w-8 h-8 text-blue-400" />
               </div>
@@ -33,8 +33,8 @@ export function Contacts() {
             </div>
           </div>
         </div>
-        <div className="flex gap-10 mb-10">
-          <div className="bg-gray-800 w-[400px] h-[100px] flex items-center rounded-lg">
+        <div className="flex flex-col lg:flex-row gap-10 mb-10">
+          <div className="bg-gray-800 w-[300px] lg:w-[400px] h-[100px] flex items-center rounded-lg">
             <div className="mx-5">
               <Mail className="w-8 h-8 text-blue-400" />
             </div>
@@ -44,7 +44,7 @@ export function Contacts() {
             </div>
           </div>
           <div>
-            <div className="bg-gray-800 w-[400px] h-[100px] flex items-center rounded-lg">
+            <div className="bg-gray-800 w-[300px] lg:w-[400px] h-[100px] flex items-center rounded-lg">
               <div className="mx-5">
                 <Github className="w-8 h-8 text-blue-400" />
               </div>

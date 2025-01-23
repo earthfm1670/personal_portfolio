@@ -8,7 +8,7 @@ export function Projects() {
         className="bg-gray-800 py-20 flex flex-col items-center"
       >
         <h1 className="text-blue-400 text-4xl font-bold mb-10">My Projects</h1>
-        <div className="flex gap-20 mx-20">
+        <div className="flex flex-col gap-10 lg:flex-row lg:gap-20 lg:mx-20">
           <a
             href="https://home-service-finalproject.vercel.app/"
             target="_blank"
