@@ -30,7 +30,8 @@ export function Projects() {
               </div>
             </div>
           </a>
-          <div className="bg-gray-900 rounded-lg overflow-hidden w-[300px] h-[450px]">
+          {/* hide placeholder project 2 */}
+          <div className="bg-gray-900 rounded-lg overflow-hidden w-[300px] h-[450px] hidden">
             <img
               src="/image/landscape-placeholder.svg"
               className="w-[300px] h-[300px]"
@@ -45,7 +46,8 @@ export function Projects() {
               </p>
             </div>
           </div>
-          <div className="bg-gray-900 rounded-lg overflow-hidden w-[300px] h-[450px]">
+          {/* hide placeholder project 3 */}
+          <div className="bg-gray-900 rounded-lg overflow-hidden w-[300px] h-[450px] hidden">
             <img
               src="/image/landscape-placeholder.svg"
               className="w-[300px] h-[300px]"
