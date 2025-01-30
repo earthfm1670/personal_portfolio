@@ -1,9 +1,69 @@
 import React, { useState } from "react";
-import { Link } from "react-scroll";
 import { Menu, X } from "lucide-react";
+import { useRouter } from "next/router";
+import { scroller } from "react-scroll";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const router = useRouter();
+
+  const goToResume = () => {
+    router.push("/resume");
+  };
+
+  const goToHome = () => {
+    if (window.location.pathname === "/") {
+      scroller.scrollTo("home", {
+        smooth: true,
+        duration: 500,
+      });
+    } else {
+      router.push("/").then(() => {
+        setTimeout(() => {
+          scroller.scrollTo("home", {
+            smooth: true,
+            duration: 500,
+          });
+        }, 100);
+      });
+    }
+  };
+
+  const goToProjects = () => {
+    if (window.location.pathname === "/") {
+      scroller.scrollTo("projects", {
+        smooth: true,
+        duration: 500,
+      });
+    } else {
+      router.push("/").then(() => {
+        setTimeout(() => {
+          scroller.scrollTo("projects", {
+            smooth: true,
+            duration: 500,
+          });
+        }, 100);
+      });
+    }
+  };
+
+  const goToContacts = () => {
+    if (window.location.pathname === "/") {
+      scroller.scrollTo("contacts", {
+        smooth: true,
+        duration: 500,
+      });
+    } else {
+      router.push("/").then(() => {
+        setTimeout(() => {
+          scroller.scrollTo("contacts", {
+            smooth: true,
+            duration: 500,
+          });
+        }, 100);
+      });
+    }
+  };
 
   return (
     <>
@@ -25,35 +85,29 @@ export function Navbar() {
             isMenuOpen ? "h-[80px]" : "h-0"
           } overflow-hidden transition-all duration-300 lg:h-auto lg:overflow-visible lg:mt-0`}
         >
-          <div>
-            <Link
-              to="home"
-              smooth={true}
-              duration={500}
-              className="text-blue-400 hover:text-blue-300 transition-colors duration-300 cursor-pointer"
-            >
-              Home
-            </Link>
+          <div
+            className="text-blue-400 hover:text-blue-300 transition-colors duration-300 cursor-pointer"
+            onClick={goToHome}
+          >
+            Home
           </div>
-          <div className="text-blue-400 hover:text-blue-300 transition-colors duration-300 cursor-pointer">
-            <Link
-              to="projects"
-              smooth={true}
-              duration={500}
-              className="text-blue-400 hover:text-blue-300 transition-colors duration-300 cursor-pointer"
-            >
-              Projects
-            </Link>
+          <div
+            className="text-blue-400 hover:text-blue-300 transition-colors duration-300 cursor-pointer"
+            onClick={goToResume}
+          >
+            Resume
           </div>
-          <div className="text-blue-400 hover:text-blue-300 transition-colors duration-300 cursor-pointer">
-            <Link
-              to="contacts"
-              smooth={true}
-              duration={500}
-              className="text-blue-400 hover:text-blue-300 transition-colors duration-300 cursor-pointer"
-            >
-              Contacts
-            </Link>
+          <div
+            className="text-blue-400 hover:text-blue-300 transition-colors duration-300 cursor-pointer"
+            onClick={goToProjects}
+          >
+            Projects
+          </div>
+          <div
+            className="text-blue-400 hover:text-blue-300 transition-colors duration-300 cursor-pointer"
+            onClick={goToContacts}
+          >
+            Contacts
           </div>
         </div>
       </div>
