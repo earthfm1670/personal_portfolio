@@ -133,8 +133,8 @@ export function ResumeCV() {
             <h2 className="text-2xl font-semibold mb-4 text-blue-300 ml-2 flex items-center gap-2">
               <GraduationCap className="w-6 h-6" /> Education
             </h2>
-            {educationDetails.map((education, index) => (
-              <div className="bg-gray-800 p-4 rounded-lg mt-6 lg:mt-4">
+            {educationDetails.map((education) => (
+              <div className="bg-gray-800 p-4 rounded-lg mt-6 lg:mt-4" key={education.title}>
                 <div>
                   <h3 className="text-xl font-semibold text-blue-400">
                     {education.title}
@@ -150,8 +150,8 @@ export function ResumeCV() {
             <h2 className="text-2xl font-semibold mb-4 text-blue-300 ml-2 flex items-center gap-2">
               <Briefcase className="w-6 h-6" /> Work Experience
             </h2>
-            {workExperiences.map((work, index) => (
-              <div className="bg-gray-800 p-4 rounded-lg mt-6 lg:mt-4">
+            {workExperiences.map((work) => (
+              <div className="bg-gray-800 p-4 rounded-lg mt-6 lg:mt-4" key={work.title}>
                 <div>
                   <h3 className="text-xl font-semibold text-blue-400">
                     {work.title}
@@ -174,15 +174,13 @@ export function ResumeCV() {
               </h3>
               <div className="grid grid-cols-2 gap-4">
                 {frontendSkills.map((skill) => (
-                  <>
-                    <div
-                      key={skill.name}
-                      className="flex items-center gap-2 text-blue-300 hover:text-blue-400 transition-colors duration-300 mr-2"
-                    >
-                      {skill.icon}
-                      <span className="text-gray-300">{skill.name}</span>
-                    </div>
-                  </>
+                  <div
+                    key={skill.name}
+                    className="flex items-center gap-2 text-blue-300 hover:text-blue-400 transition-colors duration-300 mr-2"
+                  >
+                    {skill.icon}
+                    <span className="text-gray-300">{skill.name}</span>
+                  </div>
                 ))}
               </div>
             </div>
@@ -192,15 +190,13 @@ export function ResumeCV() {
               </h3>
               <div className="grid grid-cols-2 gap-4">
                 {backendSkills.map((skill) => (
-                  <>
-                    <div
-                      key={skill.name}
-                      className="flex items-center gap-2 text-blue-300 hover:text-blue-400 transition-colors duration-300 mr-2"
-                    >
-                      {skill.icon}
-                      <span className="text-gray-300">{skill.name}</span>
-                    </div>
-                  </>
+                  <div
+                    key={skill.name}
+                    className="flex items-center gap-2 text-blue-300 hover:text-blue-400 transition-colors duration-300 mr-2"
+                  >
+                    {skill.icon}
+                    <span className="text-gray-300">{skill.name}</span>
+                  </div>
                 ))}
               </div>
             </div>
@@ -210,15 +206,13 @@ export function ResumeCV() {
               </h3>
               <div className="grid grid-cols-2 gap-4">
                 {otherTools.map((skill) => (
-                  <>
-                    <div
-                      key={skill.name}
-                      className="flex items-center gap-2 text-blue-300 hover:text-blue-400 transition-colors duration-300 mr-2"
-                    >
-                      {skill.icon}
-                      <span className="text-gray-300">{skill.name}</span>
-                    </div>
-                  </>
+                  <div
+                    key={skill.name}
+                    className="flex items-center gap-2 text-blue-300 hover:text-blue-400 transition-colors duration-300 mr-2"
+                  >
+                    {skill.icon}
+                    <span className="text-gray-300">{skill.name}</span>
+                  </div>
                 ))}
               </div>
             </div>
