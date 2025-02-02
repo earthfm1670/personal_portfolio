@@ -16,7 +16,7 @@ export function Projects() {
           >
             <div className="bg-gray-900 rounded-lg overflow-hidden w-[300px] h-[450px] shadow-lg hover:shadow-blue-400/50 transition-shadow duration-300 cursor-pointer">
               <img
-                src="/image/homeservicenail.jpg"
+                src="/image/homeservicenail.jpeg"
                 className="w-[300px] h-[300px]"
               ></img>
               <div className="bg-gray-900 py-2">
