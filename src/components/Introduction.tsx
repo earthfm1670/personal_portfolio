@@ -24,7 +24,7 @@ export function Introduction() {
         </p>
         <Link to="projects" smooth={true} duration={500}>
           <button className="my-2 px-6 py-3 border-2 border-blue-400 text-blue-400 font-semibold rounded-full hover:bg-blue-400 hover:text-gray-900 transition-colors duration-300 cursor-pointer">
-            View My Projects
+            View My Resume
           </button>
         </Link>
       </div>

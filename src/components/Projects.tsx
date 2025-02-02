@@ -1,4 +1,5 @@
 import React from "react";
+import { ArrowRight } from "lucide-react";
 
 export function Projects() {
   return (
@@ -14,7 +15,7 @@ export function Projects() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className="bg-gray-900 rounded-lg overflow-hidden w-[300px] h-[450px] shadow-lg hover:shadow-blue-400/50 transition-shadow duration-300 cursor-pointer">
+            <div className="bg-gray-900 rounded-lg overflow-hidden w-[300px] h-[500px] shadow-lg hover:shadow-blue-400/50 transition-shadow duration-300 cursor-pointer">
               <img
                 src="/image/homeservicenail.jpeg"
                 className="w-[300px] h-[300px]"
@@ -26,6 +27,10 @@ export function Projects() {
                 <p className="text-gray-400 m-2 mx-4">
                   A web platform connecting users with skilled handymen nearby,
                   making it easy to find help for any task.
+                </p>
+                <p className="text-blue-400 m-2 mx-4 mt-4 flex gap-2">
+                  View Project
+                  <ArrowRight size={18} className="relative top-[1px]" />
                 </p>
               </div>
             </div>
