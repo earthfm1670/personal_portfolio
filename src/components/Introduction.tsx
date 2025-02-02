@@ -1,7 +1,13 @@
+import { useRouter } from "next/router";
 import React from "react";
 import { Link } from "react-scroll";
 
 export function Introduction() {
+  const router = useRouter();
+
+  const goToResume = () => {
+    router.push("/resume");
+  };
   return (
     <>
       <div
@@ -22,11 +28,20 @@ export function Introduction() {
           &quot;Aspiring fullstack developer ready to build impactful digital
           solutions.&quot;
         </p>
-        <Link to="projects" smooth={true} duration={500}>
-          <button className="my-2 px-6 py-3 border-2 border-blue-400 text-blue-400 font-semibold rounded-full hover:bg-blue-400 hover:text-gray-900 transition-colors duration-300 cursor-pointer">
+        <div className="flex gap-4">
+          <Link to="projects" smooth={true} duration={500}>
+            <button className="my-2 px-6 py-3 border-2 border-blue-400 text-blue-400 font-semibold rounded-full hover:bg-blue-400 hover:text-gray-900 transition-colors duration-300 cursor-pointer">
+              View My Project
+            </button>
+          </Link>
+
+          <button
+            className="my-2 px-6 py-3 border-2 border-blue-400 text-blue-400 font-semibold rounded-full hover:bg-blue-400 hover:text-gray-900 transition-colors duration-300 cursor-pointer"
+            onClick={goToResume}
+          >
             View My Resume
           </button>
-        </Link>
+        </div>
       </div>
     </>
   );
